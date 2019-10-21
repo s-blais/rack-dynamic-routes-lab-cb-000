@@ -8,7 +8,7 @@ class Application
       item_name = req.path.split("/items/").last
       binding.pry
       item = Item.all.find{|item| item.name == item_name}
-      item.price
+      puts item.price
     else
       resp.write "Route not found"
       resp.status = 404
